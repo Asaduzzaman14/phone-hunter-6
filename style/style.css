@@ -48,6 +48,7 @@ text-align: center;
 }
 .hr-line{
     margin: 15px 0 25px 0;
+    color: #f35353;
     background-color: #f35353;
     padding:1px;
     border-radius: 5px;
@@ -78,4 +79,13 @@ text-align: center;
 .img img{
     width:100%;
     align-items: center;
+}
+button{
+    border-radius: 20px !important;
+    color:#fff;
+    background-color:#f35353;
+    border:none;
+    padding:5px 12px;
+    
+
 }
