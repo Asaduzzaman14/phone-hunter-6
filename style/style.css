@@ -12,7 +12,7 @@ body{
 
 .heading{
     text-align: center;
-    color:#502b09;
+    color:rgb(139, 29, 29);
     margin:15px 0;
     font-size:40px;
 }
@@ -66,11 +66,20 @@ text-align: center;
 }
 .details-style{
     margin: 0 auto;
-    width:380px;
-    box-shadow:  1px 1px 8px #c4bdbd;
+    width:350px;
+    box-shadow:  1px 1px 8px #f35353;
     text-align: center;
     border-radius: 10px;
     padding:10px
+}
+.sensors{
+    text-align: left;
+    margin-bottom: 0;
+   
+    
+}
+#name{
+   font-weight: 500;
 }
 #container{
     display:grid;
@@ -106,6 +115,16 @@ text-align: center;
     border:none;
     padding:5px 12px;
     
+
+}
+.btn-style:hover{
+    border:1px solid #f35353;
+    color:#f35353;
+    font-weight: 500;
+    background-color: #fff;
+  
+   
+
 
 }
 

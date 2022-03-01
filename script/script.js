@@ -92,15 +92,15 @@ const showDetails = (details) => {
     <div class="detail">
          <h3>Brand: ${details.brand}</h3>
          <h4>Name: ${details.name}</h4>
-         <p>releaseDate: ${details.releaseDate}</p>
+         <p> <span id='name'>releaseDate: </span> ${details.releaseDate ? details.releaseDate : 'no found'}</p>
 
 
          <h5>Others</h5>
          <span>Bluetooth: ${details?.others?.Bluetooth ? details.others.Bluetooth : 'not Fount'}  </span>
          <span>Radio: ${details?.others?.Radio ? details.others.Radio : 'not Fount'}</span>
-         <p>Bluetooth: ${details?.others?.Radio ? details.others.Radio : 'not Fount'}</p>
-         <p>Bluetooth: ${details?.others?.WLAN ? details.others.WLAN : 'not Fount'}</p>
-         <p>Bluetooth: ${details?.others?.USB ? details.others.USB : 'not Fount'}</p>
+         <p>Radio: ${details?.others?.Radio ? details.others.Radio : 'not Fount'}</p>
+         <p>WLAN: ${details?.others?.WLAN ? details.others.WLAN : 'not Fount'}</p>
+         <p>USB: ${details?.others?.USB ? details.others.USB : 'not Fount'}</p>
       
       
 
@@ -113,14 +113,13 @@ const showDetails = (details) => {
         
         
          <h5>Sensors </h5>
-         <p>sensors: ${details.mainFeatures.sensors[5]}</p>
+         <p class='sensors w-100 ms-0'>sensors: ${details.mainFeatures.sensors.join()} </p>
         
 
     </div>
      
     `
     detail.appendChild(div)
-
 
 
 
