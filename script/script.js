@@ -1,16 +1,11 @@
 
-
 const spinner = (spinnerStyle) => {
 
     document.getElementById('spinner').style.display = spinnerStyle
 }
 
 
-
-
-
 const searchMobile = () => {
-
 
     document.getElementById('detail').textContent = ''
     document.getElementById('container').textContent = ''
@@ -23,6 +18,7 @@ const searchMobile = () => {
     if (!inputValue) {
         alert('input fild empty')
         spinner('none')
+        datas.getElementById('moreBtn').style.display = 'none'
     } else {
         const url = `https://openapi.programming-hero.com/api/phones?search=${inputValue}`
         fetch(url)
@@ -38,12 +34,10 @@ const searchMobile = () => {
 const sendData = (datas) => {
     showPhone(datas)
 
-
-
     if (datas.length >= 20) {
         document.getElementById('moreBtn').style.display = 'block'
     } else {
-        datas.getElementById('moreBtn').style.display = 'none'
+        document.getElementById('moreBtn').style.display = 'none'
     }
 
     const slice = datas.slice(20, datas.length)
@@ -87,21 +81,12 @@ const showPhone = (phones) => {
 
 
 
-
+//  show more part
 
 const morePhon = (slicePhone) => {
     // console.log(a, 'first');
-
-
     document.getElementById('moreBtn').addEventListener('click', () => {
         document.getElementById('moreBtn').style.display = 'none'
-        // const slicePhone = phones.slice(20, phones.length)
-        // if (slicePhone.length > 0) {
-        //     document.getElementById('moreBtn').style.display = 'block'
-        // } else {
-        //     document.getElementById('moreBtn').style.display = 'none'
-        // }
-
 
         document.getElementById('morePhone').innerHTML = '';
         const morePhone = document.getElementById('morePhone')
