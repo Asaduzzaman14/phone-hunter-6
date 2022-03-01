@@ -32,6 +32,9 @@ const searchMobile = () => {
 
 
 const showPhone = (phones) => {
+    const morePhones = phones.slice(20, phones.length)
+    console.log(morePhones, 'eeeeeeeeee');
+
     if (phones.length == 0) {
         alert('phone not found')
         spinner('none')
@@ -61,6 +64,7 @@ const showPhone = (phones) => {
             container.appendChild(div)
             spinner('none')
         });
+
 
 
     }
