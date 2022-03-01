@@ -33,7 +33,7 @@ const searchMobile = () => {
 
 const showPhone = (phones) => {
     if (phones.length == 0) {
-        alert('phone 00')
+        alert('phone not found')
         spinner('none')
     }
 
@@ -61,6 +61,8 @@ const showPhone = (phones) => {
             container.appendChild(div)
             spinner('none')
         });
+
+
     }
 
 
@@ -77,7 +79,7 @@ const moreDetails = (slugs) => {
 const showDetails = (details) => {
 
     console.log(details);
-    document.getElementById('detail').textContent = ''
+    // document.getElementById('detail').textContent = ''
 
     const detail = document.getElementById('detail')
 
@@ -92,28 +94,28 @@ const showDetails = (details) => {
     <div class="detail">
          <h3>Brand: ${details.brand}</h3>
          <h4>Name: ${details.name}</h4>
-         <p> <span id='name'>releaseDate: </span> ${details.releaseDate ? details.releaseDate : 'no found'}</p>
+         <p> <span id='name'>releaseDate: </span> ${details.releaseDate ? details.releaseDate : 'not found'}</p>
 
 
          <h5>Others</h5>
-         <span>Bluetooth: ${details?.others?.Bluetooth ? details.others.Bluetooth : 'not Fount'}  </span>
-         <span>Radio: ${details?.others?.Radio ? details.others.Radio : 'not Fount'}</span>
-         <p>Radio: ${details?.others?.Radio ? details.others.Radio : 'not Fount'}</p>
-         <p>WLAN: ${details?.others?.WLAN ? details.others.WLAN : 'not Fount'}</p>
-         <p>USB: ${details?.others?.USB ? details.others.USB : 'not Fount'}</p>
+         <span><span id='name'>Bluetooth: </span> ${details?.others?.Bluetooth ? details.others.Bluetooth : 'not Found'}  </span>
+         <span><span id='name'>GPS: </span> ${details?.others?.GPS ? details.others.GPS : 'not Found'}</span>
+         <p><span id='name'>Radio: </span> ${details?.others?.Radio ? details.others.Radio : 'not Found'}</p>
+         <p><span id='name'>WLAN: </span> ${details?.others?.WLAN ? details.others.WLAN : 'not Found'}</p>
+         <p><span id='name'>USB: </span> ${details?.others?.USB ? details.others.USB : 'not Found'}</p>
+         <p><span id='name'>NFC: </span> ${details?.others?.NFC ? details.others.NFC : 'not Found'}</p>
       
-      
-
+        
          <h5>mainFeatures </h5>
          <hr class='hr-line'>
-         <p>chipSet: ${details.mainFeatures.chipSet}</p>
-         <p>storage: ${details.mainFeatures.storage}</p>
-         <p>memory: ${details.mainFeatures.memory}</p>
-         <p>displaySize: ${details.mainFeatures.displaySize}</p>
+         <p><span id='name'>chipSet: </span> ${details.mainFeatures.chipSet ? details.mainFeatures.chipSet : 'not Found'}</p>
+         <p><span id='name'>storage: </span> ${details.mainFeatures.storage ? details.mainFeatures.storage : 'not found'}</p>
+         <p><span id='name'>memory: </span> ${details.mainFeatures.memory ? details.mainFeatures.memory : 'not found'}</p>
+         <p><span id='name'>displaySize: </span> ${details.mainFeatures.displaySize ? details.mainFeatures.displaySize : 'not found'}</p>
         
         
          <h5>Sensors </h5>
-         <p class='sensors w-100 ms-0'>sensors: ${details.mainFeatures.sensors.join(' ')} </p>
+         <p class='sensors w-100 ms-0'>sensors: ${details.mainFeatures.sensors.join(', ')} </p>
         
 
     </div>

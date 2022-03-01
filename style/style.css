@@ -66,7 +66,7 @@ text-align: center;
 }
 .details-style{
     margin: 0 auto;
-    width:350px;
+    width:320px;
     box-shadow:  1px 1px 8px #f35353;
     text-align: center;
     border-radius: 10px;
@@ -80,6 +80,12 @@ text-align: center;
 }
 #name{
    font-weight: 500;
+}
+#detail{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+
 }
 #container{
     display:grid;
@@ -142,6 +148,11 @@ text-align: center;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 20px;
         padding:10px; 
-        
    }
+   #detail{
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+
+}
   }
