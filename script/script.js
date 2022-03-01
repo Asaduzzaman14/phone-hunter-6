@@ -96,8 +96,8 @@ const showDetails = (details) => {
 
 
          <h5>Others</h5>
-         <p>Bluetooth: ${details?.others?.Bluetooth ? details.others.Bluetooth : 'not Fount'}</p>
-         <p>Radio: ${details?.others?.Radio ? details.others.Radio : 'not Fount'}</p>
+         <span>Bluetooth: ${details?.others?.Bluetooth ? details.others.Bluetooth : 'not Fount'}  </span>
+         <span>Radio: ${details?.others?.Radio ? details.others.Radio : 'not Fount'}</span>
          <p>Bluetooth: ${details?.others?.Radio ? details.others.Radio : 'not Fount'}</p>
          <p>Bluetooth: ${details?.others?.WLAN ? details.others.WLAN : 'not Fount'}</p>
          <p>Bluetooth: ${details?.others?.USB ? details.others.USB : 'not Fount'}</p>
@@ -110,6 +110,8 @@ const showDetails = (details) => {
          <p>storage: ${details.mainFeatures.storage}</p>
          <p>memory: ${details.mainFeatures.memory}</p>
          <p>displaySize: ${details.mainFeatures.displaySize}</p>
+        
+        
          <h5>Sensors </h5>
          <p>sensors: ${details.mainFeatures.sensors[5]}</p>
         
