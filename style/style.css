@@ -66,7 +66,7 @@ text-align: center;
 }
 .details-style{
     margin: 0 auto;
-    width:250px;
+    width:380px;
     box-shadow:  1px 1px 8px #c4bdbd;
     text-align: center;
     border-radius: 10px;
@@ -109,7 +109,9 @@ text-align: center;
 
 }
 
-@media screen and (max-width: 680px) {
+/* responsive */
+
+@media screen and (max-width: 780px) {
     .heading{
         font-size: 25px;
     }

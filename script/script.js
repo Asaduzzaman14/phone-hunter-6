@@ -31,22 +31,17 @@ const searchMobile = () => {
 }
 
 
-
 const showPhone = (phones) => {
     if (phones.length == 0) {
         alert('phone 00')
         spinner('none')
     }
-    // spinner('none')
+
     else {
         const phone = phones.slice(0, 20)
 
         const container = document.getElementById('container')
         phone.forEach(phone => {
-            // if (phones.length == 0) {
-            //     alert('phone 007')
-            //     // spinner('none')
-            // }
 
 
             // console.log(phone);
@@ -81,13 +76,13 @@ const moreDetails = (slugs) => {
 }
 const showDetails = (details) => {
 
-    // console.log(details);
+    console.log(details);
     document.getElementById('detail').textContent = ''
 
     const detail = document.getElementById('detail')
 
     let div = document.createElement('div')
-    div.classList.add('card')
+    div.classList.add('details-style')
 
     div.innerHTML = `
     <div class="img">
@@ -95,10 +90,27 @@ const showDetails = (details) => {
     </div>
 
     <div class="detail">
-         <h2>Brand: ${details.brand}</h2>
-         <p>Name: ${details.name}</p>
+         <h3>Brand: ${details.brand}</h3>
+         <h4>Name: ${details.name}</h4>
          <p>releaseDate: ${details.releaseDate}</p>
+
+
+         <h5>Others</h5>
+         <p>Bluetooth: ${details?.others?.Bluetooth ? details.others.Bluetooth : 'not Fount'}</p>
+         <p>Radio: ${details?.others?.Radio ? details.others.Radio : 'not Fount'}</p>
+         <p>Bluetooth: ${details?.others?.Radio ? details.others.Radio : 'not Fount'}</p>
+         <p>Bluetooth: ${details?.others?.WLAN ? details.others.WLAN : 'not Fount'}</p>
+         <p>Bluetooth: ${details?.others?.USB ? details.others.USB : 'not Fount'}</p>
+      
+      
+
+         <h5>mainFeatures </h5>
+         <hr class='hr-line'>
+         <p>chipSet: ${details.mainFeatures.chipSet}</p>
+         <p>storage: ${details.mainFeatures.storage}</p>
          <p>memory: ${details.mainFeatures.memory}</p>
+         <p>displaySize: ${details.mainFeatures.displaySize}</p>
+         <h5>Sensors </h5>
          <p>sensors: ${details.mainFeatures.sensors[5]}</p>
         
 
