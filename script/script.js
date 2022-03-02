@@ -168,7 +168,7 @@ const showDetails = (details) => {
         
         
          <h5>Sensors </h5>
-         <p class='sensors w-100 ms-0'>sensors: ${details.mainFeatures.sensors.join(' ')} </p>
+         <p class='sensors w-100 ms-0'>sensors: ${details.mainFeatures.sensors ? details.mainFeatures.sensors.join(' ') : 'not found'} </p>
         
 
     </div>
