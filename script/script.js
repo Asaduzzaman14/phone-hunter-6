@@ -18,7 +18,7 @@ const searchMobile = () => {
     if (!inputValue) {
         alert('input fild empty')
         spinner('none')
-        datas.getElementById('moreBtn').style.display = 'none'
+        document.getElementById('moreBtn').style.display = 'none'
     } else {
         const url = `https://openapi.programming-hero.com/api/phones?search=${inputValue}`
         fetch(url)
@@ -43,8 +43,6 @@ const sendData = (datas) => {
     const slice = datas.slice(20, datas.length)
     morePhon(slice)
 }
-
-
 
 
 
